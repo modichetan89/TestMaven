@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="landmark.LifestyleAutomation.Listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test name="TestVerifyText(failed)">
+    <classes>
+      <class name="landmark.LifestyleAutomation.HomePageVerifyNavigationBar">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- landmark.LifestyleAutomation.HomePageVerifyNavigationBar -->
+      <class name="landmark.LifestyleAutomation.HomePage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- landmark.LifestyleAutomation.HomePage -->
+      <class name="landmark.LifestyleAutomation.HomePageVerifyText">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="homePageNavigation"/>
+        </methods>
+      </class> <!-- landmark.LifestyleAutomation.HomePageVerifyText -->
+    </classes>
+  </test> <!-- TestVerifyText(failed) -->
+</suite> <!-- Failed suite [Suite] -->

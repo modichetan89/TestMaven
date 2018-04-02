@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="56543" started-at="2018-04-01T08:47:18Z" finished-at="2018-04-01T08:48:14Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="56543" started-at="2018-04-01T08:47:18Z" finished-at="2018-04-01T08:48:14Z">
+      <class name="landmark.LifestyleAutomation.HomePage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="initialize" is-config="true" duration-ms="11336" started-at="2018-04-01T14:17:18Z" finished-at="2018-04-01T14:17:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="homePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="homePageNavigation" duration-ms="5401" started-at="2018-04-01T14:17:29Z" data-provider="getData" finished-at="2018-04-01T14:17:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageNavigation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="tearDown" is-config="true" duration-ms="2124" started-at="2018-04-01T14:17:35Z" finished-at="2018-04-01T14:17:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="initialize" is-config="true" duration-ms="10802" started-at="2018-04-01T14:17:37Z" finished-at="2018-04-01T14:17:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="homePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="homePageNavigation" duration-ms="7073" started-at="2018-04-01T14:17:48Z" data-provider="getData" finished-at="2018-04-01T14:17:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test2@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageNavigation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="tearDown" is-config="true" duration-ms="2120" started-at="2018-04-01T14:17:55Z" finished-at="2018-04-01T14:17:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="initialize" is-config="true" duration-ms="10522" started-at="2018-04-01T14:17:57Z" finished-at="2018-04-01T14:18:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="homePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="homePageNavigation" duration-ms="5000" started-at="2018-04-01T14:18:07Z" data-provider="getData" finished-at="2018-04-01T14:18:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test3@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567890]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageNavigation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:landmark.LifestyleAutomation.HomePage@62ee68d8]" name="tearDown" is-config="true" duration-ms="2129" started-at="2018-04-01T14:18:12Z" finished-at="2018-04-01T14:18:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- landmark.LifestyleAutomation.HomePage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

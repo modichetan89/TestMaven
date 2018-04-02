@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Suite">
+	<listeners>
+		<listener class-name="landmark.LifestyleAutomation.Listeners"/>
+		<listener class-name="resources.ExtentReporterNG"/>
+	</listeners>
+
+	
+	<test thread-count="5" name="TestVerifyText">
+		<classes>
+			<class name="landmark.LifestyleAutomation.HomePageVerifyText" />
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="TestHomePage">
+		<classes>
+			<class name="landmark.LifestyleAutomation.HomePage" />
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="TestHomePageVerifyNavigationBar">
+		<classes>
+			<class name="landmark.LifestyleAutomation.HomePageVerifyNavigationBar" />
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="TestAppTest">
+		<classes>
+			<class name="landmark.LifestyleAutomation.AppTest" />
+		</classes>
+	</test>
+	
+</suite>

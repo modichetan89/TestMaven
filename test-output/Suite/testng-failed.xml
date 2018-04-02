@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="landmark.LifestyleAutomation.HomePage">
+        <methods>
+          <include name="homePageNavigation" invocation-numbers="1 2"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- landmark.LifestyleAutomation.HomePage -->
+      <class name="landmark.LifestyleAutomation.HomePageVerifyText">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- landmark.LifestyleAutomation.HomePageVerifyText -->
+      <class name="landmark.LifestyleAutomation.HomePageVerifyNavigationBar">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- landmark.LifestyleAutomation.HomePageVerifyNavigationBar -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
