@@ -20,11 +20,11 @@ public class HomePage extends BaseClass{
 		//Since initializeDriver method returning driver we are storing it in driver object
 		driver = initializeDriver();
 		log.info("Driver initialized...");
+		//driver.get(prop.getProperty("URL"));
 	}
 	
 	@Test(dataProvider="getData")
 	public void homePageLogin(String username, String password) throws IOException, InterruptedException{
-		driver.get(prop.getProperty("URL"));
 		log.info("Navigated to website...");
 		Thread.sleep(5000);	
 		LandingPage lp = new LandingPage(driver);

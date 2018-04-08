@@ -16,7 +16,7 @@ public class HomePageVerifyNavigationBar extends BaseClass{
 	@BeforeTest
 	public void initialize() throws IOException, InterruptedException{
 		driver = initializeDriver();
-		driver.get(prop.getProperty("URL"));
+		//driver.get(prop.getProperty("URL"));
 		Thread.sleep(5000);	
 	}
 	

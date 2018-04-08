@@ -49,6 +49,7 @@ public class ExtentReporterNG implements IReporter {
  
                 /*test.getTest(). = getTime(result.getStartMillis());
                 test.getTest().endedTime = getTime(result.getEndMillis());*/
+                
  
                 for (String group : result.getMethod().getGroups())
                     test.assignCategory(group);
@@ -61,6 +62,7 @@ public class ExtentReporterNG implements IReporter {
                 test.log(status, message);
  
                 extent.endTest(test);
+
             }
         }
     }

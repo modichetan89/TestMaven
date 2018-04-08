@@ -23,36 +23,68 @@ public class BaseClass {
 	
 	public static WebDriver driver;
 	public Properties prop;
-	public static Logger log;
+	public static Logger log = LogManager.getLogger(BaseClass.class.getName());
+	private static String screenshotDirectoryPath;
+	
+	private String appWebURL;
+	private String browserName;
+	private String chromedriver;
+	private String firefoxdriver;
+	private String IEDriver;
+	
+
+	
 	//initializeDriver method starts here
 	public WebDriver initializeDriver() throws IOException{
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream("D:\\Workspace\\LifestyleAutomation\\src\\main\\java\\resources\\data.properties");
 		prop.load(fis);
-		String browserName = prop.getProperty("browser");
+		browserName = prop.getProperty("browser");
+		chromedriver = prop.getProperty("gooleChromePath");
+		firefoxdriver = prop.getProperty("geckoDriverPath");
+		IEDriver = prop.getProperty("IEPath");
+		appWebURL = prop.getProperty("URL");
+		screenshotDirectoryPath = prop.getProperty("failedScreenShotDirectoryPath");
+		
+		
 		//Use logging here to get the browser name
 		if(browserName.equals("chrome")){
 			//execute with chrome driver
-			System.setProperty("webdriver.chrome.driver", "D:\\Selenium New\\chromedriver_win32\\chromedriver.exe");
-			driver = new ChromeDriver();	
+			System.setProperty("webdriver.chrome.driver", chromedriver);
+			log.info("Chrome browser running");
+			driver = new ChromeDriver();
+			driver.get(appWebURL);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			
 		}
 		else if(browserName.equals("firefox")){
 			//execute with firefox driver
-			System.setProperty("webdriver.gecko.driver", "D:/Selenium New/geckodriver-v0.19.1-win64/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", firefoxdriver);
+			log.info("Firefox browser running");
 			driver = new FirefoxDriver();
+			driver.get(appWebURL);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			
 		}
 		else if(browserName.equals("IE")){
 			//execute with IE driver
-			System.setProperty("webdriver.ie.driver", "D:/Selenium New/IEDriverServer_x64_3.8.0/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", IEDriver);
+			log.info("IE browser running");
 			driver = new InternetExplorerDriver();
+			driver.get(appWebURL);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		}
 		else{
-			//Browser not present
+			log.info("Given browser not found in system");
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		log=LogManager.getLogger(BaseClass.class.getName());
+		
+
 		//returning driver object so that who ever want to use driver can use it
 		return driver;
 			
@@ -60,7 +92,7 @@ public class BaseClass {
 	
 	public void getScreenshot(String result1) throws IOException{
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File dest = new File("D:\\Workspace\\LifestyleAutomation\\screenshot\\"+result1+"_"+timestamp()+".png");
+		File dest = new File(screenshotDirectoryPath+result1+"_"+timestamp()+".png");
 		FileUtils.copyFile(src, dest);
 	}
 	
