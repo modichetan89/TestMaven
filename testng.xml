@@ -8,22 +8,9 @@
 		<listener class-name="resources.ExtentReporterNG"/>
 	</listeners>
 
-	
-	<test thread-count="5" name="TestVerifyText">
-		<classes>
-			<class name="landmark.LifestyleAutomation.HomePageVerifyText" />
-		</classes>
-	</test>
-	
 	<test thread-count="5" name="TestHomePage">
 		<classes>
 			<class name="landmark.LifestyleAutomation.HomePage" />
-		</classes>
-	</test>
-	
-	<test thread-count="5" name="TestHomePageVerifyNavigationBar">
-		<classes>
-			<class name="landmark.LifestyleAutomation.HomePageVerifyNavigationBar" />
 		</classes>
 	</test>
 	

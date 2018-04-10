@@ -2,14 +2,13 @@ package landmark.LifestyleAutomation;
 
 import java.io.IOException;
 
-
+import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import pageObjects.LandingPage;
-import pageObjects.LoginPage;
+import methods.HomePage_M;
 import resources.BaseClass;
 
 //Inherit BaseClass by using extends to use BaseClass method.
@@ -23,23 +22,18 @@ public class HomePage extends BaseClass{
 		//driver.get(prop.getProperty("URL"));
 	}
 	
-	@Test(dataProvider="getData")
-	public void homePageLogin(String username, String password) throws IOException, InterruptedException{
-		log.info("Navigated to website...");
-		Thread.sleep(5000);	
-		LandingPage lp = new LandingPage(driver);
-		lp.getLogin().click();  // This is equivalent to driver.findElement(By.id(""));
-		log.info("Navigated to Login Dialog...");
-		LoginPage lip = new LoginPage(driver);
-		lip.getUsername().sendKeys(username);
-		Thread.sleep(2000);
-		log.info("Typing username...");
-		lip.getPassword().sendKeys(password);
-		Thread.sleep(2000);
-		log.info("Typing password...");
-		lip.getSubmitButton().click();
-		log.info("Clicked on submit button...");
-	}
+	
+	
+	
+	@Test(priority=1,alwaysRun=true)
+    public void navigateToLoginPage(ITestContext context) throws Exception {
+		log.info("Execution started for homePageLogin");
+       context.setAttribute("description", "Open login dialog");
+       HomePage_M accessTestMethod = new HomePage_M();
+       Assert.assertTrue(accessTestMethod.homePageLogin());}
+	
+	
+	
 	
 	@AfterTest
 	public void tearDown(){
@@ -47,21 +41,5 @@ public class HomePage extends BaseClass{
 		driver=null;
 	}
 	
-	@DataProvider
-	public Object[][] getData(){
-		//row e.g 3 stands for how many iterations you want to send. 3 means 3 set of data.
-		//column stands for how many values per test. 2 means 2 values i.e uname and pwd
-		//The first array represents a data set whereas the second array contains the parameter values.
-		// 3 and 2 is size of array, so when assigning value index start from 0
-		
-		Object[][] data = new Object[3][2];  data[0][0] = "test1@gmail.com";
-		data[0][1] = "123456";
-		data[1][0] = "test2@gmail.com";
-		data[1][1] = "12345678";
-		data[2][0] = "test3@gmail.com";
-		data[2][1] = "1234567890";
-		
-		return data;
-	}
 	
 }

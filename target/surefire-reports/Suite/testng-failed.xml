@@ -5,27 +5,15 @@
     <listener class-name="landmark.LifestyleAutomation.Listeners"/>
     <listener class-name="resources.ExtentReporterNG"/>
   </listeners>
-  <test name="TestVerifyText(failed)">
+  <test name="TestHomePage(failed)">
     <classes>
-      <class name="landmark.LifestyleAutomation.HomePageVerifyNavigationBar">
-        <methods>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- landmark.LifestyleAutomation.HomePageVerifyNavigationBar -->
       <class name="landmark.LifestyleAutomation.HomePage">
         <methods>
+          <include name="navigateToLoginPage" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- landmark.LifestyleAutomation.HomePage -->
-      <class name="landmark.LifestyleAutomation.HomePageVerifyText">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-          <include name="homePageNavigation"/>
-        </methods>
-      </class> <!-- landmark.LifestyleAutomation.HomePageVerifyText -->
     </classes>
-  </test> <!-- TestVerifyText(failed) -->
+  </test> <!-- TestHomePage(failed) -->
 </suite> <!-- Failed suite [Suite] -->

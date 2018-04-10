@@ -26,6 +26,7 @@ public class Listeners implements ITestListener {
 		log.info("The name of the testcase passed is :"+result.getName());
 	}
 
+	
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		try {
@@ -37,6 +38,7 @@ public class Listeners implements ITestListener {
 			e.printStackTrace();
 		}
 	}
+	
 
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub

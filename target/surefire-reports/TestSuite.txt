@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 67.463 s <<< FAILURE! - in TestSuite
-homePageNavigation(landmark.LifestyleAutomation.HomePageVerifyText)  Time elapsed: 0.085 s  <<< FAILURE!
-java.lang.AssertionError: expected [oooooClick & Collect - order online and collect at a store of your choice for free] but found [Click & Collect - order online and collect at a store of your choice for free]
-	at landmark.LifestyleAutomation.HomePageVerifyText.homePageNavigation(HomePageVerifyText.java:27)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.114 s - in TestSuite
