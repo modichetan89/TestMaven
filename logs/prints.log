@@ -28,3 +28,16 @@
 15:07:55.228 [main] INFO  resources.BaseClass - Navigated to website...
 15:08:06.674 [main] INFO  resources.BaseClass - Navigated to Login Dialog...
 15:08:06.676 [main] INFO  resources.BaseClass - The name of the testcase passed is :navigateToLoginPage
+22:41:43.017 [main] INFO  resources.BaseClass - navigateToLoginPage test case started
+22:41:43.035 [main] INFO  resources.BaseClass - The name of the testcase Skipped is :navigateToLoginPage
+22:50:04.914 [main] INFO  resources.BaseClass - navigateToLoginPage test case started
+22:50:04.925 [main] INFO  resources.BaseClass - The name of the testcase Skipped is :navigateToLoginPage
+22:59:33.179 [main] INFO  resources.BaseClass - navigateToLoginPage test case started
+22:59:33.185 [main] INFO  resources.BaseClass - The name of the testcase Skipped is :navigateToLoginPage
+23:03:16.503 [main] INFO  resources.BaseClass - Chrome browser running
+23:03:31.216 [main] INFO  resources.BaseClass - Driver initialized...
+23:03:31.310 [main] INFO  resources.BaseClass - navigateToLoginPage test case started
+23:03:31.314 [main] INFO  resources.BaseClass - Execution started for homePageLogin
+23:03:31.314 [main] INFO  resources.BaseClass - Navigated to website...
+23:03:37.879 [main] INFO  resources.BaseClass - Navigated to Login Dialog...
+23:03:37.883 [main] INFO  resources.BaseClass - The name of the testcase passed is :navigateToLoginPage

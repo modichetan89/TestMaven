@@ -9,8 +9,7 @@
     <classes>
       <class name="landmark.LifestyleAutomation.HomePage">
         <methods>
-          <include name="navigateToLoginPage" invocation-numbers="0"/>
-          <include name="tearDown"/>
+          <include name="navigateToLoginPage"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- landmark.LifestyleAutomation.HomePage -->

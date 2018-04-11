@@ -37,7 +37,7 @@ public class BaseClass {
 	//initializeDriver method starts here
 	public WebDriver initializeDriver() throws IOException{
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\chetan_modi\\workspace\\TestMaven-master\\src\\main\\java\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream("src/main/java/resources/data.properties");
 		prop.load(fis);
 		browserName = prop.getProperty("browser");
 		chromedriver = prop.getProperty("gooleChromePath");
