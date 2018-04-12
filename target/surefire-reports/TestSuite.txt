@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 45.379 s - in TestSuite
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 34.804 s <<< FAILURE! - in TestSuite
+LoginToAccount(landmark.LifestyleAutomation.HomePage)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at landmark.LifestyleAutomation.HomePage.LoginToAccount(HomePage.java:40)
+
+VerifyLoggedIn(landmark.LifestyleAutomation.HomePage)  Time elapsed: 10.104 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at landmark.LifestyleAutomation.HomePage.VerifyLoggedIn(HomePage.java:48)
+

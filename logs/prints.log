@@ -1,3 +1,38 @@
-13:15:09.083 [main] INFO  resources.BaseClass - Navigated to website...
-13:15:17.578 [main] INFO  resources.BaseClass - Navigated to Login Dialog...
-13:15:17.580 [main] INFO  resources.BaseClass - The name of the testcase passed is :navigateToLoginPage
+17:58:10.631 [main] INFO  resources.BaseClass - VerifyLoggedIn test case started
+17:58:10.689 [main] INFO  resources.BaseClass - Execution started for VerifyLoggedIn
+17:58:20.784 [main] ERROR resources.BaseClass - Logout link not present or User is not logged in
+17:58:21.086 [main] INFO  resources.BaseClass - The name of the testcase failed is :VerifyLoggedIn
+18:07:18.901 [main] INFO  resources.BaseClass - Chrome browser running
+18:07:29.859 [main] INFO  resources.BaseClass - Driver initialized...
+18:07:29.875 [main] INFO  resources.BaseClass - navigateToLoginPage test case started
+18:07:29.875 [main] INFO  resources.BaseClass - Execution started for navigateToLoginPage
+18:07:29.889 [main] INFO  resources.BaseClass - Navigated to website...
+18:07:35.952 [main] INFO  resources.BaseClass - Navigated to Login Dialog...
+18:07:35.953 [main] INFO  resources.BaseClass - Entering the username
+18:07:35.953 [main] ERROR resources.BaseClass - Failed to open login dialog
+18:07:36.405 [main] INFO  resources.BaseClass - The name of the testcase failed is :navigateToLoginPage
+18:07:36.406 [main] INFO  resources.BaseClass - LoginToAccount test case started
+18:07:36.406 [main] INFO  resources.BaseClass - Execution started for LoginToAccount
+18:07:36.406 [main] INFO  resources.BaseClass - Entering the username
+18:07:36.406 [main] ERROR resources.BaseClass - Failed to login
+18:07:36.707 [main] INFO  resources.BaseClass - The name of the testcase failed is :LoginToAccount
+18:07:36.707 [main] INFO  resources.BaseClass - VerifyLoggedIn test case started
+18:07:36.708 [main] INFO  resources.BaseClass - Execution started for VerifyLoggedIn
+18:07:46.794 [main] ERROR resources.BaseClass - Logout link not present or User is not logged in
+18:07:47.058 [main] INFO  resources.BaseClass - The name of the testcase failed is :VerifyLoggedIn
+18:23:52.075 [main] INFO  resources.BaseClass - Chrome browser running
+18:24:05.574 [main] INFO  resources.BaseClass - Driver initialized...
+18:24:05.592 [main] INFO  resources.BaseClass - navigateToLoginPage test case started
+18:24:05.593 [main] INFO  resources.BaseClass - Execution started for navigateToLoginPage
+18:24:05.601 [main] INFO  resources.BaseClass - Navigated to website...
+18:24:12.047 [main] INFO  resources.BaseClass - Navigated to Login Dialog...
+18:24:12.050 [main] INFO  resources.BaseClass - The name of the testcase passed is :navigateToLoginPage
+18:24:12.051 [main] INFO  resources.BaseClass - LoginToAccount test case started
+18:24:12.051 [main] INFO  resources.BaseClass - Execution started for LoginToAccount
+18:24:12.051 [main] INFO  resources.BaseClass - Entering the username
+18:24:12.052 [main] ERROR resources.BaseClass - Failed to login
+18:24:12.454 [main] INFO  resources.BaseClass - The name of the testcase failed is :LoginToAccount
+18:24:12.455 [main] INFO  resources.BaseClass - VerifyLoggedIn test case started
+18:24:12.455 [main] INFO  resources.BaseClass - Execution started for VerifyLoggedIn
+18:24:22.556 [main] ERROR resources.BaseClass - Logout link not present or User is not logged in
+18:24:22.833 [main] INFO  resources.BaseClass - The name of the testcase failed is :VerifyLoggedIn

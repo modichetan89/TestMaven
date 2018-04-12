@@ -18,18 +18,29 @@ public class HomePageObj {
 		return driver.findElement(signin);
 	}
 	
-	/*
-	By verifyCnCText = By.xpath("//*[text()=' - order online and collect at a store of your choice for free']");
-	public WebElement getCnCText()
-	{
-		return driver.findElement(verifyCnCText);
+	By uname = By.xpath("//input[@type='email']");
+	public WebElement getUsername(){
+		return driver.findElement(uname);
 	}
 	
-	By verifyNavigationBar = By.xpath("//div[@class='nav-wrap clearfix']");
-	public WebElement getNavigationBar()
-	{
-		return driver.findElement(verifyNavigationBar);
+	By unameContinue = By.xpath("//input[@id='continue']");
+	public WebElement getUsernameContinue(){
+		return driver.findElement(unameContinue);
 	}
-	*/
 	
+	By pwd = By.xpath("//input[@type='password']");	
+	public WebElement getPassword(){
+		return driver.findElement(pwd);
+	}
+	
+	By submit = By.id("signInSubmit");	
+	public WebElement getSubmitButton(){
+		return driver.findElement(submit);
+	}
+	
+	
+	By signoutLink = By.xpath("//span[text()='Sign Out']");
+	public WebElement getSignOutLink(){
+		return driver.findElement(signoutLink);
+	}
 }

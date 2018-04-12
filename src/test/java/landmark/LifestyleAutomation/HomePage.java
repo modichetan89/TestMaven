@@ -27,11 +27,26 @@ public class HomePage extends BaseClass{
 	
 	@Test(priority=1,alwaysRun=true)
     public void navigateToLoginPage(ITestContext context) throws Exception {
-		log.info("Execution started for homePageLogin");
+		log.info("Execution started for navigateToLoginPage");
        context.setAttribute("description", "Open login dialog");
        HomePage_M accessTestMethod = new HomePage_M();
-       Assert.assertTrue(accessTestMethod.homePageLogin());}
+       Assert.assertTrue(accessTestMethod.LoginPageNavigation());}
 	
+	@Test(priority=2, alwaysRun=true)
+	public void LoginToAccount(ITestContext context) throws Exception {
+		log.info("Execution started for LoginToAccount");
+		context.setAttribute("description", "Attempting to login");
+		HomePage_M accessTestMethod = new HomePage_M();
+	     Assert.assertTrue(accessTestMethod.Login());
+	}
+	
+	@Test(priority=3, alwaysRun=true)
+	public void VerifyLoggedIn(ITestContext context) throws Exception {
+		log.info("Execution started for VerifyLoggedIn");
+		context.setAttribute("description", "Checking logout link");
+		HomePage_M accessTestMethod = new HomePage_M();
+	     Assert.assertTrue(accessTestMethod.verifyLogoutLinkPresent());
+	}
 	
 	
 	
