@@ -2,33 +2,33 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="23721" started-at="2018-04-11T17:33:16Z" finished-at="2018-04-11T17:33:40Z">
+  <suite name="Suite" duration-ms="42635" started-at="2018-04-12T07:44:37Z" finished-at="2018-04-12T07:45:19Z">
     <groups>
     </groups>
-    <test name="TestHomePage" duration-ms="23643" started-at="2018-04-11T17:33:16Z" finished-at="2018-04-11T17:33:40Z">
+    <test name="TestHomePage" duration-ms="42615" started-at="2018-04-12T07:44:37Z" finished-at="2018-04-12T07:45:19Z">
       <class name="landmark.LifestyleAutomation.HomePage">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:landmark.LifestyleAutomation.HomePage@5c30a9b0]" name="initialize" is-config="true" duration-ms="14729" started-at="2018-04-11T23:03:16Z" finished-at="2018-04-11T23:03:31Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:landmark.LifestyleAutomation.HomePage@5f683daf]" name="initialize" is-config="true" duration-ms="31803" started-at="2018-04-12T13:14:37Z" finished-at="2018-04-12T13:15:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="navigateToLoginPage(org.testng.ITestContext)[pri:0, instance:landmark.LifestyleAutomation.HomePage@5c30a9b0]" name="navigateToLoginPage" duration-ms="6573" started-at="2018-04-11T23:03:31Z" finished-at="2018-04-11T23:03:37Z">
+        <test-method status="PASS" signature="navigateToLoginPage(org.testng.ITestContext)[pri:0, instance:landmark.LifestyleAutomation.HomePage@5f683daf]" name="navigateToLoginPage" duration-ms="8502" started-at="2018-04-12T13:15:09Z" finished-at="2018-04-12T13:15:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3697186]]>
+                <![CDATA[org.testng.TestRunner@340b9973]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToLoginPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:landmark.LifestyleAutomation.HomePage@5c30a9b0]" name="tearDown" is-config="true" duration-ms="2243" started-at="2018-04-11T23:03:37Z" finished-at="2018-04-11T23:03:40Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:landmark.LifestyleAutomation.HomePage@5f683daf]" name="tearDown" is-config="true" duration-ms="2293" started-at="2018-04-12T13:15:17Z" finished-at="2018-04-12T13:15:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- landmark.LifestyleAutomation.HomePage -->
     </test> <!-- TestHomePage -->
-    <test name="TestAppTest" duration-ms="0" started-at="2018-04-11T17:33:40Z" finished-at="2018-04-11T17:33:40Z">
+    <test name="TestAppTest" duration-ms="0" started-at="2018-04-12T07:45:19Z" finished-at="2018-04-12T07:45:19Z">
     </test> <!-- TestAppTest -->
   </suite> <!-- Suite -->
 </testng-results>
