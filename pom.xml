@@ -15,14 +15,14 @@
 	</properties>
 
 	<build>
-	
-	<resources>
-	<resource>
-        <directory>src/main/java/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-      </resources>
-      
+
+		<resources>
+			<resource>
+				<directory>src/main/java/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
 		<plugins>
 			<!-- Suirefire plugin to run xml files -->
 			<plugin>
@@ -36,65 +36,73 @@
 				</configuration>
 			</plugin>
 			<!-- Post-Man plugin -->
-		 <plugin>
-			<groupId>ch.fortysix</groupId>
-			<artifactId>maven-postman-plugin</artifactId>
-			<executions>
-				<execution>
-				
-				<id>send a mail</id>
-				<phase>test</phase>
-				<goals>
-				<goal>send-mail</goal>
-				</goals>
-				<inherited>true</inherited>
-				
-				<configuration>
-					<!-- From Email address -->
-					<from>modichetan89@gmail.com</from>
-					
-					<!--  Email subject -->
-					<subject>Test Automation Report</subject>
-					
-					<!-- Fail the build if the mail doesnt reach -->
-					<failonerror>true</failonerror>
-					
-					<!-- host -->
-					<mailhost>smtp.gmail.com</mailhost>
-					<!-- port of the host -->
-					<mailport>465</mailport>
-					<mailssl>true</mailssl>
-					<mailAltConfig>true</mailAltConfig>
-					
-					<!-- Email Authentication(USername and Password) -->
-					<mailuser>modichetan89@gmail.com</mailuser>
-					<mailpassword>test</mailpassword>
-					
-					<receivers>
-						<!-- To Email address -->
-						<receiver>modichetan89@gmail.com</receiver>
-					</receivers>
-					
-					<fileSets>
-					<fileSet>
-						<!-- Report directory Path -->
-						<directory>target/surefire-reports/</directory>
-						<includes>
-							<!-- Report file name -->
-							<include>ExtentReportsTestNG.html</include>
-						</includes>
-						<!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
-						</fileSet>
-					</fileSets>				
-				
-				</configuration>
-				</execution>
-			</executions>
-		</plugin>
+			<plugin>
+				<groupId>ch.fortysix</groupId>
+				<artifactId>maven-postman-plugin</artifactId>
+				<executions>
+					<execution>
+
+						<id>send a mail</id>
+						<phase>test</phase>
+						<goals>
+							<goal>send-mail</goal>
+						</goals>
+						<inherited>true</inherited>
+
+						<configuration>
+							<!-- From Email address -->
+							<from>modichetan89@gmail.com</from>
+
+							<!-- Email subject -->
+							<subject>Test Automation Report</subject>
+
+							<!-- Fail the build if the mail doesnt reach -->
+							<failonerror>true</failonerror>
+
+							<!-- host -->
+							<mailhost>smtp.gmail.com</mailhost>
+							<!-- port of the host -->
+							<mailport>465</mailport>
+							<mailssl>true</mailssl>
+							<mailAltConfig>true</mailAltConfig>
+
+							<!-- Email Authentication(USername and Password) -->
+							<mailuser>modichetan89@gmail.com</mailuser>
+							<mailpassword>test</mailpassword>
+
+							<receivers>
+								<!-- To Email address -->
+								<receiver>modichetan89@gmail.com</receiver>
+							</receivers>
+
+							<fileSets>
+								<fileSet>
+									<!-- Report directory Path -->
+									<directory>target/surefire-reports/</directory>
+									<includes>
+										<!-- Report file name -->
+										<include>ExtentReportsTestNG.html</include>
+									</includes>
+									<!-- Use Regular Expressions like **/*.html if you want all the 
+										html files to send -->
+								</fileSet>
+							</fileSets>
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>5.0.4</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -125,31 +133,31 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.11.0</version>
 		</dependency>
-		
-		<dependency>
-    		<groupId>commons-io</groupId>
-    		<artifactId>commons-io</artifactId>
-    		<version>2.6</version>
-		</dependency>
-		
-		<dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>3.1.3</version>
-</dependency>
-	
-<dependency>
-    <groupId>com.relevantcodes</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>2.41.2</version>
-</dependency>
 
-<!-- https://mvnrepository.com/artifact/ch.fortysix/maven-postman-plugin -->
-<dependency>
-    <groupId>ch.fortysix</groupId>
-    <artifactId>maven-postman-plugin</artifactId>
-    <version>0.1.6</version>
-</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.1.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/ch.fortysix/maven-postman-plugin -->
+		<dependency>
+			<groupId>ch.fortysix</groupId>
+			<artifactId>maven-postman-plugin</artifactId>
+			<version>0.1.6</version>
+		</dependency>
 
 
 	</dependencies>

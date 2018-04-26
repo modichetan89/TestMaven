@@ -5,20 +5,22 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import org.openqa.selenium.interactions.Actions;
+
 import pageObjects.HomePageObj;
 import resources.BaseClass;
 
 public class HomePage_M extends BaseClass{
-	
-      Properties prop1 = new Properties();
-	   BaseClass testEnv = new BaseClass();
+		//WebDriver driver;
+      Properties prop = new Properties();
 		HomePageObj lp = new HomePageObj(driver);
-	   
+	   //Here we are calling constructor of HomePageObj that is having argument driver.
 	   
 public  HomePage_M () throws IOException {
 	   String fileName = "src/main/java/resources/data.properties";
 	   FileInputStream fin=new FileInputStream(fileName);
-	   prop1.load(fin);
+	   prop.load(fin);
+	  // this.driver = driver;
+	   //Here driver argument constructor is not required since in HomePage_M class we don't need drivers 
 	}
 	
 
@@ -43,13 +45,13 @@ public  HomePage_M () throws IOException {
 			log.info("Entering the username");
 			//WebDriverWait wait = new WebDriverWait(driver, 10);
 			
-			String USERNAME = prop1.getProperty("username");
+			String USERNAME = prop.getProperty("username");
 			//wait.until(ExpectedConditions.visibilityOfElementLocated((By) lp.getUsername()));
 			lp.getUsername().sendKeys(USERNAME);
 			log.info("Continue to next page to enter password");
 			lp.getUsernameContinue().click();
 			log.info("Entering the password");
-			String PASSWORD = prop1.getProperty("password");
+			String PASSWORD = prop.getProperty("password");
 			lp.getPassword().sendKeys(PASSWORD);
 			log.info("Clicking on Submit button");
 			lp.getSubmitButton().click();

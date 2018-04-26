@@ -1,8 +1,12 @@
 package resources;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -17,6 +21,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 public class BaseClass {
@@ -75,6 +80,19 @@ public class BaseClass {
 			driver = new InternetExplorerDriver();
 			driver.get(appWebURL);
 			driver.manage().window().maximize();
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		}
+		else if(browserName.equals("MobileChrome")){
+			//execute with MobileChrome driver
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
+			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel API 26");
+			capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+
+			URL url= new URL("http://127.0.0.1:4723/wd/hub");
+			driver = new AndroidDriver(url ,capabilities);
+			driver.get(appWebURL);
 			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		}
 		else{

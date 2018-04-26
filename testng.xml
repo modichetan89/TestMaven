@@ -8,9 +8,9 @@
 		<listener class-name="resources.ExtentReporterNG"/>
 	</listeners>
 
-	<test thread-count="5" name="TestHomePage">
+	<test thread-count="5" name="SanityTest">
 		<classes>
-			<class name="landmark.LifestyleAutomation.HomePage" />
+			<class name="landmark.LifestyleAutomation.SanityTest" />
 		</classes>
 	</test>
 	
